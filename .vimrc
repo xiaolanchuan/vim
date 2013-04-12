@@ -39,4 +39,23 @@ let Tlist_Ctags_Cmd='/usr/local/bin/ctags'  "设置ctags命令的位置
 nnoremap <C-r> : Tlist<CR>        "设置关闭和打开taglist窗口的快捷键
 "}
 
+"A是一个用来快速切换头文件和源文件的插件
+"A{
+nnoremap <silent> <F12> :A<CR>
+"}
+
+"cscope
+"{
+set cscopequickfix=s-,c-,d-,i-,t-,e-
+nnoremap <silent> <F9> :cw<CR>
+nmap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+"}
+
 "}}

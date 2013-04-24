@@ -1,6 +1,10 @@
 syn on                      "语法支持
 
 "common conf {{             通用配置
+
+map ^P 0i#<Esc>   "当同时按 ctrl + p 键时，会在行首插入一个#号
+map ^O 0x   "当同时按 ctrl + o 键时，会删除行首第一个字符
+map <F9> 0i#<Esc>   "当按F9键时，会在行首插入一个#号
 set ai                      "自动缩进
 set bs=2                    "在insert模式下用退格键删除
 set showmatch               "代码匹配
